@@ -10,9 +10,6 @@ const PORT = process.env.PORT || 3000;
 app.use(cors());
 app.use(express.json());
 
-if (process.env.NODE_ENV === "production") {
-}
-
 // add a todo
 
 app.post("/todos", async (req, res) => {
