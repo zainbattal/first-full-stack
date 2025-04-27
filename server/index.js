@@ -7,7 +7,14 @@ const PORT = process.env.PORT || 3000;
 // process.env.PORT
 
 // middleware
-app.use(cors());
+app.use(
+  cors({
+    origin: "https://first-full-stack-inky.vercel.app",
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    allowedHeaders: ["Content-Type", "Authorization"],
+  })
+);
+app.options("*", cors());
 app.use(express.json());
 
 // add a todo
