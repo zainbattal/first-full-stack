@@ -9,7 +9,7 @@ const PORT = process.env.PORT || 3000;
 // middleware
 app.use(
   cors({
-    origin: "https://first-full-stack-inky.vercel.app",
+    origin: "*",
   })
 );
 
