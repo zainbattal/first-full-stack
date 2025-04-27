@@ -5,7 +5,7 @@ export default function ListTodos() {
   const getTodos = async () => {
     try {
       const response = await fetch(
-        "https://first-full-stack-wz3r.onrender.com/todos"
+        "https://first-full-stack-om7vd5257-zain-battals-projects.vercel.app/todos"
       );
       const jsonData = await response.json();
       setTodos(jsonData);
@@ -27,7 +27,7 @@ export default function ListTodos() {
               const name = todo.id;
               console.log(name);
               const deleteTodo = await fetch(
-                `https://first-full-stack-wz3r.onrender.com/todos/${name}`,
+                `https://first-full-stack-om7vd5257-zain-battals-projects.vercel.app/${name}`,
                 {
                   method: "DELETE",
                 }

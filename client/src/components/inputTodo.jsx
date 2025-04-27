@@ -9,7 +9,7 @@ export default function Input() {
     try {
       const body = { discreption };
       const response = await fetch(
-        "https://first-full-stack-wz3r.onrender.com/todos",
+        "https://first-full-stack-om7vd5257-zain-battals-projects.vercel.app/todos",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
