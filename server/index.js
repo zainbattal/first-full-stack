@@ -9,7 +9,12 @@ const PORT = process.env.PORT || 3000;
 // middleware
 app.use(
   cors({
-    origin: "*",
+    origin: [
+      "https://first-full-stack-om7vd5257-zain-battals-projects.vercel.app",
+      "http://localhost:5173",
+    ],
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true,
   })
 );
 
