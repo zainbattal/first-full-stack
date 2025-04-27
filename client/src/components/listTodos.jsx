@@ -4,7 +4,9 @@ export default function ListTodos() {
   const [todos, setTodos] = useState([]);
   const getTodos = async () => {
     try {
-      const response = await fetch("http://localhost:3000/todos");
+      const response = await fetch(
+        "https://first-full-stack-wz3r.onrender.com/todos"
+      );
       const jsonData = await response.json();
       setTodos(jsonData);
     } catch (error) {
@@ -25,7 +27,7 @@ export default function ListTodos() {
               const name = todo.id;
               console.log(name);
               const deleteTodo = await fetch(
-                `http://localhost:3000/todos/${name}`,
+                `https://first-full-stack-wz3r.onrender.com/todos/${name}`,
                 {
                   method: "DELETE",
                 }

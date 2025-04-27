@@ -8,11 +8,14 @@ export default function Input() {
 
     try {
       const body = { discreption };
-      const response = await fetch("http://localhost:3000/todos", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(body),
-      });
+      const response = await fetch(
+        "https://first-full-stack-wz3r.onrender.com/todos",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(body),
+        }
+      );
       window.location = "/";
       setDiscreption("");
     } catch (error) {
