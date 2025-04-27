@@ -12,6 +12,10 @@ app.use(express.json());
 
 // add a todo
 
+app.get("/", (req, res) => {
+  res.send("backend running");
+});
+
 app.post("/todos", async (req, res) => {
   try {
     const { discreption } = req.body;
