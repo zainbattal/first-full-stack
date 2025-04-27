@@ -4,22 +4,10 @@ const pool = require("./db");
 const cors = require("cors");
 const PORT = process.env.PORT || 3000;
 
-const allowedOrigins = ["https://first-full-stack-inky.vercel.app"]; // your frontend URL
-const options = {
-  origin: function (origin, callback) {
-    if (allowedOrigins.indexOf(origin) !== -1 || !origin) {
-      // Allow requests without origin (like from Postman or local dev)
-      callback(null, true);
-    } else {
-      callback(new Error("Not allowed by CORS"));
-    }
-  },
-};
-
 // process.env.PORT
 
 // middleware
-app.use(cors(options));
+app.use(cors());
 app.use(express.json());
 
 // add a todo
